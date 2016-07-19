@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{73F4A306-B926-4155-95C3-36C37497BDD3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LeafSoft</RootNamespace>
+    <AssemblyName>C#通讯调试工具%28v3.0测试版%29</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Lib\BytesCheck.cs" />
+    <Compile Include="Lib\HotKey.cs" />
+    <Compile Include="PartPanel\BasePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Units\Label.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Units\Label.Designer.cs">
+      <DependentUpon>Label.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Units\NetTCPServer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Units\NetTCPServer.Designer.cs">
+      <DependentUpon>NetTCPServer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Units\TabDataReceive.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Units\TabDataReceive.Designer.cs">
+      <DependentUpon>TabDataReceive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="yyzq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yyzq.Designer.cs">
+      <DependentUpon>yyzq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeafControl\BytesBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LeafControl\HexBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lib\AppInfor.cs" />
+    <Compile Include="Lib\EnumType.cs" />
+    <Compile Include="Lib\LeafEvent.cs" />
+    <Compile Include="Model\CMD.cs" />
+    <Compile Include="Model\LeafTCPClient.cs" />
+    <Compile Include="PartPanel\TCPServerPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PartPanel\TCPServerPanel.Designer.cs">
+      <DependentUpon>TCPServerPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Units\DataCounter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Units\DataCounter.Designer.cs">
+      <DependentUpon>DataCounter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Units\DataReceive.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Units\DataReceive.Designer.cs">
+      <DependentUpon>DataReceive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Units\ICommunication.cs" />
+    <EmbeddedResource Include="Units\Label.resx">
+      <DependentUpon>Label.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Units\NetTCPServer.resx">
+      <DependentUpon>NetTCPServer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Units\TabDataReceive.resx">
+      <DependentUpon>TabDataReceive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="yyzq.resx">
+      <DependentUpon>yyzq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PartPanel\TCPServerPanel.resx">
+      <DependentUpon>TCPServerPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Units\DataCounter.resx">
+      <DependentUpon>DataCounter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Units\DataReceive.resx">
+      <DependentUpon>DataReceive.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="ClassDiagram3.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
